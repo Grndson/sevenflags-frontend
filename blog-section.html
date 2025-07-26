@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="/Images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/Images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/Images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Seven Flags" />
+  <link rel="manifest" href="/Images/favicon/site.webmanifest" />
+  <script src="/Js/layout.js" defer></script>
+  <title>SevenFlags Real Estate</title>
+</head>
+
+<body> 
+    <!-- Header Section -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="website-logo">
+        <img class="logo-monogram" src="Icons/Rent Home Section.svg" alt="Seven Flags" />
+        <div class="brand-name">SevenFlags</div>
+      </div>
+
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      
+      <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="properties.html" class="nav-link">Properties</a>
+        <a href="invest.html" class="nav-link">Invest</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="about.html" class="nav-link">Overview</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+       <section class="blog-details-section">
+  <div class="blog-details-container">
+    <div class="blog-header">
+      <h1>How to Choose the Right Property</h1>
+      <p class="blog-meta">Published on May 23, 2025 • By John Doe</p>
+    </div>
+
+    <div class="blog-image">
+      <img src="images/zac-cain-4ETshgrhbJw-unsplash.jpg" alt="Blog Cover" />
+    </div>
+
+    <div class="blog-body">
+      <p>
+        Choosing the right property requires a combination of market research,
+        financial planning, and personal priorities. In this post, we explore...
+      </p>
+      <p>
+        Whether you’re looking for a family home or an investment property,
+        knowing your budget, desired location, and essential amenities is key...
+      </p>
+      <!-- More content here -->
+    </div>
+  </div>
+</section>
+ 
+    </main> 
+
+    <!-- Footer Section -->
+    <footer class="custom-footer">
+        <div class="footer-content">
+        <div class="footer-section about">
+            <div class="footer-logo">
+            <i class="fa-solid fa-house-chimney"></i>
+            <span>SevenFlags</span>
+            </div>
+            <p>Embark on a journey of discovery with Seven Flags’ commitment to excellence.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h4>Useful Links</h4>
+            <ul>
+            <li><a href="#">Listing</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h4>Get in Touch</h4>
+            <ul>
+            <li><i class="fas fa-phone-alt"></i> +91 600 500 600</li>
+            <li><i class="fas fa-envelope"></i> hello@sevenflags.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> 1234, Nairobi, Kenya</li>
+            </ul>
+        </div>
+
+        <div class="footer-section newsletter">
+            <h4>Newsletter</h4>
+            <form>
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit">Submit</button>
+            </form>
+        </div>
+        </div>
+
+        <div class="footer-bottom">
+        <div class="social-icons">
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <p>&copy; 2025 Seven Flags. All rights reserved.</p>
+        </div>
+    </footer>
+<script>
+  const currentPath = window.location.pathname.replace(/\/$/, "");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute("href").replace(/\/$/, "");
+    if (linkPath === currentPath) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>    
+
+<style>
+    .blog-details-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.blog-details-container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.blog-header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.blog-meta {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.blog-image img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.blog-body p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+</style>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navbar").classList.toggle("active");
+  }
+</script>
+
+<script>
+        // Back to Top Button Functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // Smooth scroll to top when clicked
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Add subtle pulse animation when button first appears
+        let hasAnimated = false;
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300 && !hasAnimated) {
+                backToTopButton.style.animation = 'pulse 0.6s ease-in-out';
+                hasAnimated = true;
+                setTimeout(() => {
+                    backToTopButton.style.animation = '';
+                }, 600);
+            }
+        });
+    </script>

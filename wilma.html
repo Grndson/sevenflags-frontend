@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wilma Towers - Seven Flags</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/Styles/property.css" />
+  <link rel="stylesheet" href="/Styles/header.css" />
+  <link rel="stylesheet" href="/Styles/footer.css" />
+  <link rel="icon" type="image/png" href="/Images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/Images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/Images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Seven Flags">
+  <link rel="manifest" href="/Images/favicon/site.webmanifest">
+  <script src="/Js/layout.js" defer></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <div id="header"></div>
+
+  <main>
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section">
+      <div class="breadcrumb-container">
+        <div class="breadcrumb-wrapper">
+          <div class="breadcrumb-links">
+            <a href="index.html" class="breadcrumb-link">Home</a>
+            <span class="breadcrumb-divider">/</span>
+            <a href="properties.html" class="breadcrumb-link">Properties</a>
+            <span class="breadcrumb-divider">/</span>
+            <span class="breadcrumb-current">Property Details</span>
+          </div>
+          <div class="breadcrumb-title-wrap">
+            <h1 class="breadcrumb-title">Wilma Towers</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+      <section class="carousel-section">
+        <img src="/Images/Wilma Towers/WilmaHome.jpg" alt="Wilma Towers Background" class="background-image" />
+        <div class="carousel-container">
+          <button class="scroll-btn left" onclick="scrollThumbnails(-1)">←</button>
+          <div class="thumbnails" id="thumbnails">
+            <img src="/Images/Wilma Towers/Wilma1.jpg" alt="Wilma Towers Photo 1" />
+            <img src="/Images/Wilma Towers/Wilma2.jpg" alt="Wilma Towers Photo 2" />
+            <img src="/Images/Wilma Towers/Wilma3.jpg" alt="Wilma Towers Photo 3" />
+            <img src="/Images/Wilma Towers/Wilma4.jpg" alt="Wilma Towers Photo 4" />
+            <img src="/Images/Wilma Towers/Wilma5.jpg" alt="Wilma Towers Photo 5" />
+            <img src="/Images/Wilma Towers/Wilma6.jpg" alt="Wilma Towers Photo 6" />
+          </div>
+          <button class="scroll-btn right" onclick="scrollThumbnails(1)">→</button>
+        </div>
+      </section>
+
+      <section class="property-description-section">
+        <div class="property-container">
+          <!-- Description -->
+          <div class="description-box">
+            <h2>Description</h2>
+            <p>
+              Wilma Towers is a striking twin-tower residential development set in a prime urban location in Kenya. Designed for modern city living, it offers sleek 1 and 2-bedroom apartments with open-plan layouts, panoramic views, and high-end finishes.
+            </p>
+            <p>
+              With lifestyle amenities, secure access, and proximity to major business hubs, shopping centers, and transport routes, Wilma Towers is perfect for professionals, families, and investors seeking a blend of comfort, convenience, and long-term value.
+            </p>
+          </div>
+
+          <hr />
+
+          <!-- Address -->
+          <div class="address-box">
+            <h2>Address</h2>
+            <ul class="address-details">
+              <li><strong>Name</strong>: Wilma Towers</li>
+              <li><strong>City</strong>: Nairobi</li>
+              <li><strong>Date Of Completion</strong>: Completed</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <!-- Details -->
+          <div class="details-box">
+            <h2>1 Bedroom Apartment</h2>
+            <ul class="details">
+              <li><strong>Price</strong>: $ 58,545.00</li>
+              <li><strong>Size</strong>: 387.50 sqft</li>
+              <li><strong>Monthly Installment</strong>: $ 0.00</li>
+              <li><strong>Deposit Required</strong>: 20%</li>
+              <li><strong>Service Fees</strong>: $ 62.00/Month</li>
+              <li><strong>Interest Rates</strong>: 1.00%</li>
+              <li><strong>Payment Plan Duration</strong>: 0 Months</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div class="details-box">
+            <h2>2 Bedroom Apartment</h2>
+            <ul class="details">
+              <li><strong>Price</strong>: $ 115,971.00</li>
+              <li><strong>Size</strong>: 882.64 sqft</li>
+              <li><strong>Monthly Installment</strong>: $ 0.00</li>
+              <li><strong>Deposit Required</strong>: 20%</li>
+              <li><strong>Service Fees</strong>: $ 77.00/Month</li>
+              <li><strong>Interest Rates</strong>: 1.00%</li>
+              <li><strong>Payment Plan Duration</strong>: 0 Months</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <!-- Amenities -->
+          <div class="amenities-box">
+            <h2>Amenities</h2>
+            <ul class="amenities-details">
+              <li>Lift</li>
+              <li>Security Guard</li>
+              <li>WiFi</li>
+              <li>Swimming Pool</li>
+              <li>Play Ground</li>
+              <li>Parking</li>
+              <li>Power Backup</li>
+              <li>Gym</li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="map-section">
+          <h2>Location</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.800000000000!2d36.800000000000000!3d-1.300000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sWilma%20Towers!5e0!3m2!1sen!2ske!4v1752074123369!5m2!1sen!2ske"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Map showing location of Wilma Towers in Nairobi, Kenya"
+            ></iframe>
+            <p>Nairobi</p>
+          </div>
+        </section>
+
+        <!-- Video Section -->
+        <div class="video-box">
+          <h2>Property Tour</h2>
+          <div class="video-wrapper">
+            <div class="video-container">
+              <video id="propertyVideo" playsinline>
+                <source src="/Images/Wilma Towers/" type="video/mp4">
+                <p>Your browser does not support the video tag. Please try a modern browser like Chrome, Firefox, or Safari, or download the video <a href="Images/Wilma Towers/">here</a>.</p>
+              </video>
+              <button id="playButton">
+                <i class="fa fa-play" style="color: white; font-size: 32px;"></i>
+              </button>
+              <div class="video-controls">
+                <input type="range" class="seek-bar" min="0" max="100" value="0">
+                <span class="video-time">00:00 / 00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+      <div class="back-to-top-icon">↑</div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <div id="footer"></div>
+
+  <!-- External JavaScript -->
+  <script src="/Js/property.js"></script>
+</body>
+</html>

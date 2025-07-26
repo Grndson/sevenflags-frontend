@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grosvenor Residence - Seven Flags</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/Styles/property.css" />
+  <link rel="stylesheet" href="/Styles/header.css" />
+  <link rel="stylesheet" href="/Styles/footer.css" />
+  <link rel="icon" type="image/png" href="/Images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/Images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/Images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Seven Flags">
+  <link rel="manifest" href="/Images/favicon/site.webmanifest">
+  <script src="/Js/layout.js" defer></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <div id="header"></div>
+
+  <main>
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section">
+      <div class="breadcrumb-container">
+        <div class="breadcrumb-wrapper">
+          <div class="breadcrumb-links">
+            <a href="index.html" class="breadcrumb-link">Home</a>
+            <span class="breadcrumb-divider">/</span>
+            <a href="properties.html" class="breadcrumb-link">Properties</a>
+            <span class="breadcrumb-divider">/</span>
+            <span class="breadcrumb-current">Property Details</span>
+          </div>
+          <div class="breadcrumb-title-wrap">
+            <h1 class="breadcrumb-title">Grosvenor Residence</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+      <section class="carousel-section">
+        <img src="/Images/Grosvenor/Grosvenor10.jpeg" alt="Background" class="background-image" />
+        <div class="carousel-container">
+          <button class="scroll-btn left" onclick="scrollThumbnails(-1)">←</button>
+          <div class="thumbnails" id="thumbnails">
+            <img src="/Images/Grosvenor/Grosvenor Kitchen.jpg" alt="Photo 1" />
+            <img src="/Images/Grosvenor/Grosvenor Lounge.jpg" alt="Photo 2" />
+            <img src="/Images/Grosvenor/Grosvenor Space.jpg" alt="Photo 3" />
+            <img src="/Images/Grosvenor/Grosvenor Counter.jpg" alt="Photo 4" />
+            <img src="/Images/Grosvenor/Grosvenor Bedroom-1.jpg" alt="Photo 5" />
+            <img src="/Images/Grosvenor/Grosvenor5.jpeg" alt="Photo 6" />
+          </div>
+          <button class="scroll-btn right" onclick="scrollThumbnails(1)">→</button>
+        </div>
+      </section>
+
+      <section class="property-description-section">
+        <div class="property-container">
+          <!-- Description -->
+          <div class="description-box">
+            <h2>Description</h2>
+            <p>
+              Soaring amongst the tallest residential towers in Westlands, Grosvenor Residences introduces a bold new vision of modern luxury living. This landmark development offers elegant 1 and 2-bedroom apartments thoughtfully designed with functional layouts, bespoke finishes, and high-end interiors that elevate everyday comfort. Each home is a statement of refined living, blending form and function in a way that redefines the standard for upscale residences in Nairobi.
+            </p>
+            <p>
+              Strategically located adjacent to the iconic GTC Towers, Grosvenor places residents in the heart of Westlands with seamless access to the city center, business hubs, and lifestyle landmarks. Whether you’re seeking an exceptional place to live or a high-yield investment opportunity, Grosvenor delivers unmatched prestige, panoramic city views, and strong capital growth potential making it a rare blend of elegance and smart urban investment.
+            </p>
+          </div>
+
+          <hr />
+
+          <!-- Address -->
+          <div class="address-box">
+            <h2>Address</h2>
+            <ul class="address-details">
+              <li><strong>Name</strong>: Grosvenor Residence</li>
+              <li><strong>City</strong>: Nairobi</li>
+              <li><strong>Date Of Completion</strong>: July 2027</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <!-- Details -->
+          <div class="details-box">
+            <h2>1 Bedroom Apartment</h2>
+            <ul class="details">
+              <li><strong>Price</strong>: $ 74,429.00</li>
+              <li><strong>Size</strong>: 602.78 sqft</li>
+              <li><strong>Monthly Installment</strong>: $ 2,004.62</li>
+              <li><strong>Deposit Required</strong>: 20% </li>
+              <li><strong>Service Fees</strong>: $ 62.00/Month</li>
+              <li><strong>Interest Rates</strong>: 1.00%</li>
+              <li><strong>Payment Plan Duration</strong>: 30 Months</li>
+              <li><strong>ROI</strong>: 30%</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div class="details-box">
+            <h2>2 Bedroom Apartment</h2>
+            <ul class="details">
+              <li><strong>Price</strong>: $ 100,580.00</li>
+              <li><strong>Size</strong>: 925.70 sqft</li>
+              <li><strong>Monthly Installment</strong>: $ 3,386.19</li>
+              <li><strong>Deposit Required</strong>: 20% </li>
+              <li><strong>Service Fees</strong>: $ 77.00/Month</li>
+              <li><strong>Interest Cost</strong>: 1.00%</li>
+              <li><strong>Payment Plan Duration</strong>: 30 Months</li>
+              <li><strong>ROI</strong>: 30%</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <!-- Amenities -->
+          <div class="amenities-box">
+            <h2>Amenities</h2>
+            <ul class="amenities-details">
+              <li><i class="fas fa-swimming-pool"></i> Heated Swimming Pools</li>
+              <li><i class="fas fa-door-open"></i> Grand Reception Lobbies</li>
+              <li><i class="fas fa-child"></i> Play Area & Recreation Facility</li>
+              <li><i class="fas fa-dumbbell"></i> Yoga Room & Gymnasium</li>
+              <li><i class="fas fa-coffee"></i> Residents’ Coffee House</li>
+              <li><i class="fas fa-handshake"></i> Meeting & Business Lounge</li>
+              <li><i class="fas fa-seedling"></i> Landscaped Art & Courtyard</li>
+              <li><i class="fas fa-fire"></i> Barbecue Area</li>
+              <li><i class="fas fa-bolt"></i> Backup Generator & Borehole</li>
+              <li><i class="fas fa-car"></i> Secure Multi-level Parking</li>
+              <li><i class="fas fa-elevator"></i> High-Speed Elevators</li>
+              <li><i class="fas fa-video"></i> CCTV & 24/7 Security</li>
+            </ul>
+
+
+          </div>
+        </div>
+
+        <section class="map-section">
+          <h2>Location</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7977.681033598663!2d36.80544977489212!3d-1.2685153987194144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f176e9dacfeef%3A0xaee354796b29ef15!2sGrosvenor%20Residences!5e0!3m2!1sen!2ske!4v1752073786410!5m2!1sen!2ske"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Map showing location of Grosvenor Residence in Westlands, Nairobi, Kenya"
+            ></iframe>
+            <p>35 Westlands Rd, Nairobi</p>
+          </div>
+        </section>
+
+        <!-- Video Section -->
+        <div class="video-box">
+          <h2>Property Tour</h2>
+          <div class="video-wrapper">
+            <div class="video-container">
+              <video id="propertyVideo" playsinline>
+                <source src="/Images/Grosvenor/Grosvenor Vid.mp4" type="video/mp4">
+                <p>Your browser does not support the video tag. Please try a modern browser like Chrome, Firefox, or Safari, or download the video <a href="Images/Grosvenor/Grosvenor Vid.mp4">here</a>.</p>
+              </video>
+              <button id="playButton">
+                <i class="fa fa-play" style="color: white; font-size: 32px;"></i>
+              </button>
+              <div class="video-controls">
+                <input type="range" class="seek-bar" min="0" max="100" value="0">
+                <span class="video-time">00:00 / 00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+      <div class="back-to-top-icon">↑</div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <div id="footer"></div>
+
+  <!-- External JavaScript -->
+  <script src="/Js/property.js"></script>
+</body>
+</html>

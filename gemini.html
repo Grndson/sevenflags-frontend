@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini Residency - Seven Flags</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/Styles/property.css" />
+  <link rel="stylesheet" href="/Styles/header.css" />
+  <link rel="stylesheet" href="/Styles/footer.css" />
+  <link rel="icon" type="image/png" href="/Images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/Images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/Images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Seven Flags">
+  <link rel="manifest" href="/Images/favicon/site.webmanifest">
+  <script src="/Js/layout.js" defer></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <div id="header"></div>
+
+  <main>
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section">
+      <div class="breadcrumb-container">
+        <div class="breadcrumb-wrapper">
+          <div class="breadcrumb-links">
+            <a href="index.html" class="breadcrumb-link">Home</a>
+            <span class="breadcrumb-divider">/</span>
+            <a href="properties.html" class="breadcrumb-link">Properties</a>
+            <span class="breadcrumb-divider">/</span>
+            <span class="breadcrumb-current">Property Details</span>
+          </div>
+          <div class="breadcrumb-title-wrap">
+            <h1 class="breadcrumb-title">Gemini Residency</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+ <section class="carousel-section">
+        <img src="/Images/Gemini/Gemini.jpeg" alt="Background" class="background-image" />
+        <div class="carousel-container">
+          <button class="scroll-btn left" onclick="scrollThumbnails(-1)">←</button>
+          <div class="thumbnails" id="thumbnails">
+            <img src="/Images/Gemini/Gemini1.jpeg" alt="Photo 1" />
+            <img src="/Images/Gemini/Gemini2.jpeg" alt="Photo 2" />
+            <img src="/Images/Gemini/Gemini3.jpeg" alt="Photo 3" />
+            <img src="/Images/Gemini/Gemini4.jpeg" alt="Photo 4" />
+            <img src="/Images/Gemini/Gemini5.jpeg" alt="Photo 5" />
+            <img src="/Images/Gemini/Gemini8.jpeg" alt="Photo 6" />
+          </div>
+          <button class="scroll-btn right" onclick="scrollThumbnails(1)">→</button>
+        </div>
+      </section>
+
+      <section class="property-description-section">
+        <div class="property-container">
+          <!-- Description -->
+          <div class="description-box">
+            <h2>Description</h2>
+            <p>
+              Gemini Residency offers a curated collection of modern apartments designed to reflect luxury, comfort, and contemporary elegance. With high-quality finishes, spacious layouts, and refined interiors, each home is crafted to provide a serene yet sophisticated living environment. Whether you're relaxing indoors or enjoying the urban energy outside, Gemini creates the perfect balance between privacy and vibrant city life.
+            </p>
+            <p>
+              Ideally located on Brookside Grove in Westlands, Gemini places you steps away from Nairobi’s most sought-after amenities. From premier shopping at Sarit Centre and Westgate Mall to easy access via the Nairobi Expressway and proximity to top schools, hospitals, and entertainment spots, everything you need is within reach. Gemini isn’t just a residence, it’s a lifestyle in motion.
+            </p>
+          </div>
+
+          <hr />
+
+          <!-- Address -->
+          <div class="address-box">
+            <h2>Address</h2>
+            <ul class="address-details">
+              <li><strong>Name</strong>: Gemini Residency</li>
+              <li><strong>City</strong>: Nairobi</li>
+              <li><strong>Area</strong>: Westlands</li>
+              <li><strong>Date Of Completion</strong>: December 2027</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <!-- Details -->
+          <div class="details-box">
+            <h2>1 Bedroom Apartment</h2>
+            <ul class="details">
+              <li><strong>Price</strong>: $ 64,216.00</li>
+              <li><strong>Size</strong>: 624.31 sqft</li>
+              <li><strong>Monthly Installment</strong>: $ 1,498.37</li>
+              <li><strong>Deposit Required</strong>: 300% </li>
+              <li><strong>Service Fees</strong>: $ 0.00/Month</li>
+              <li><strong>Interest Rates</strong>: 0.00%</li>
+              <li><strong>ROI</strong>: 30%</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div class="details-box">
+            <h2>2 Bedroom Apartment</h2>
+            <ul class="details">
+              <li><strong>Price</strong>: $ 100,580.00</li>
+              <li><strong>Size</strong>: 968.75 sqft</li>
+              <li><strong>Monthly Installment</strong>: $ 2,346.87</li>
+              <li><strong>Deposit Required</strong>: 30% </li>
+              <li><strong>Service Fees</strong>: $ 0.00/Month</li>
+              <li><strong>Interest Cost</strong>: 0.00%</li>
+              <li><strong>Payment Plan Duration</strong>: 30 Months</li>
+              <li><strong>ROI</strong>: 30%</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <!-- Amenities -->
+          <div class="amenities-box">
+            <h2>Amenities</h2>
+          <ul class="amenities-details">
+            <li><i class="fas fa-swimming-pool"></i> Two Heated Pools</li>
+            <li><i class="fas fa-dumbbell"></i> Gym & Yoga Studio / Sauna</li>
+            <li><i class="fas fa-cocktail"></i> Rooftop Lounge with Views</li>
+            <li><i class="fas fa-table-tennis"></i> Rooftop Paddle Court</li>
+            <li><i class="fas fa-child"></i> Children’s Play Area</li>
+            <li><i class="fas fa-film"></i> Private Home Theatre</li>
+            <li><i class="fas fa-briefcase"></i> Co‑working & Boardroom</li>
+            <li><i class="fas fa-concierge-bell"></i> Arrival Concierge Service</li>
+            <li><i class="fas fa-seedling"></i> Courtyard Garden & Pool</li>
+            <li><i class="fas fa-fire"></i> Rooftop BBQ Area</li>
+            <li><i class="fas fa-video"></i> 24/7 Security & Smart Access</li>
+            <li><i class="fas fa-elevator"></i> High-Speed Elevators</li>
+            <li><i class="fas fa-car"></i> Secure Ample Parking</li>
+            <li><i class="fas fa-bolt"></i> Generator & Borehole Backup</li>
+            <li><i class="fas fa-intercom"></i> Smart Intercom / Access Controls</li>
+          </ul>
+
+
+          </div>
+        </div>
+
+        <section class="map-section">
+          <h2>Location</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8548553396863!2d36.79018827489197!3d-1.2591798987288234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17a62aefe03f%3A0x2b0040057ec69c34!2sGemini%20Residency!5e0!3m2!1sen!2ske!4v1752073674974!5m2!1sen!2ske"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Map showing location of Gemini Residency in Westlands, Nairobi, Kenya"
+            ></iframe>
+            <p>Matundu Lane, Nairobi</p>
+          </div>
+        </section>
+
+        <!-- Video Section -->
+        <div class="video-box">
+          <h2>Property Tour</h2>
+          <div class="video-wrapper">
+            <div class="video-container">
+              <video id="propertyVideo" playsinline>
+                <source src="/Images/Gemini/Gemini Vid.mp4" type="video/mp4">
+                <p>Your browser does not support the video tag. Please try a modern browser like Chrome, Firefox, or Safari, or download the video <a href="Images/Gemini/Gemini Vid.mp4">here</a>.</p>
+              </video>
+              <button id="playButton">
+                <i class="fa fa-play" style="color: white; font-size: 32px;"></i>
+              </button>
+              <div class="video-controls">
+                <input type="range" class="seek-bar" min="0" max="100" value="0">
+                <span class="video-time">00:00 / 00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+      <div class="back-to-top-icon">↑</div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <div id="footer"></div>
+
+  <!-- External JavaScript -->
+  <script src="/Js/property.js"></script>
+</body>
+</html>

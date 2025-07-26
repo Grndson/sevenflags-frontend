@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Seven Flags</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/Styles/contact.css">
+  <link rel="stylesheet" href="/Styles/header.css">
+  <link rel="stylesheet" href="/Styles/footer.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="icon" type="image/png" href="/Images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/Images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/Images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Seven Flags">
+  <link rel="manifest" href="/Images/favicon/site.webmanifest">
+  <script src="/Js/contact.js" defer></script>
+  <script src="/Js/layout.js" defer></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <div id="header"></div>
+
+  <main>
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section">
+      <div class="breadcrumb-container">
+        <div class="breadcrumb-wrapper">
+          <div class="breadcrumb-links">
+            <a href="index.html" class="breadcrumb-link">Home</a>
+            <span class="breadcrumb-divider">/</span>
+            <span class="breadcrumb-current">Contact Us</span>
+          </div>
+          <div class="breadcrumb-title-wrap">
+            <h1 class="breadcrumb-title">Contact Us</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <div class="contact-container">
+        <form id="contactForm" class="contact-form">
+          <input type="hidden" name="formType" value="Contact">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          <label for="phone">Phone (Optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+          <label>Reason for Contact</label>
+          <div class="chip-group">
+            <label class="chip">
+              <input type="radio" name="reason" value="Buy" required>
+              <span>Buy</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="reason" value="Rent">
+              <span>Rent</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="reason" value="Invest">
+              <span>Invest</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="reason" value="General Inquiry">
+              <span>General Inquiry</span>
+            </label>
+          </div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+        <div class="contact-image">
+          <img src="/Images/Contact.jpg" alt="Contact illustration">
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <h2>Find Us on the Map</h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.017366041375!2d36.8005563!3d-1.2648335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173a7317b2fd%3A0x1ba79467ccf2911c!2sWestlands%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1716385202345!5m2!1sen!2ske"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen
+          title="Map showing location of Seven Flags in Westlands, Nairobi, Kenya">
+        </iframe>
+        <p>Nairobi, Kenya</p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="faq-left">
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about working with Seven Flags to buy, rent, or invest in property.</p>
+      </div>
+      <div class="faq-right">
+        <div class="faq-box">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What types of properties do we offer?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              We offer residential, commercial, and investment properties in various locations to meet your needs.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What are the payment options available for purchasing a property?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              You can pay through bank transfers, mortgage plans, or installment arrangements depending on the project.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I rent short-term properties?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes, our platform supports both long-term and short-term rental listings with flexible filters.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Are there any additional costs associated with property ownership?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes, costs may include maintenance fees, property taxes, and legal fees depending on your location.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+      <div class="back-to-top-icon">↑</div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <div id="footer"></div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oasis Metricon - Seven Flags</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/Styles/property.css" />
+  <link rel="stylesheet" href="/Styles/header.css" />
+  <link rel="stylesheet" href="/Styles/footer.css" />
+  <link rel="icon" type="image/png" href="/Images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/Images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/Images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Seven Flags">
+  <link rel="manifest" href="/Images/favicon/site.webmanifest">
+  <script src="/Js/layout.js" defer></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <div id="header"></div>
+
+  <main>
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section">
+      <div class="breadcrumb-container">
+        <div class="breadcrumb-wrapper">
+          <div class="breadcrumb-links">
+            <a href="index.html" class="breadcrumb-link">Home</a>
+            <span class="breadcrumb-divider">/</span>
+            <a href="properties.html" class="breadcrumb-link">Properties</a>
+            <span class="breadcrumb-divider">/</span>
+            <span class="breadcrumb-current">Property Details</span>
+          </div>
+          <div class="breadcrumb-title-wrap">
+            <h1 class="breadcrumb-title">Oasis Metricon</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+      <section class="carousel-section">
+        <img src="/Images/Oasis/Oasis1.jpeg" alt="Background" class="background-image" />
+        <div class="carousel-container">
+          <button class="scroll-btn left" onclick="scrollThumbnails(-1)">←</button>
+          <div class="thumbnails" id="thumbnails">
+            <img src="/Images/Oasis/0asis4.jpeg" alt="Photo 1" />
+            <img src="/Images/Oasis/Oasis2.jpeg" alt="Photo 2" />
+            <img src="/Images/Oasis/Oasis3.jpeg" alt="Photo 3" />
+            <img src="/Images/Oasis/Oasis5.jpeg" alt="Photo 4" />
+            <img src="/Images/Oasis/Oasis7.jpeg" alt="Photo 5" />
+            <img src="/Images/Oasis/Oasis9.jpeg" alt="Photo 6" />
+          </div>
+          <button class="scroll-btn right" onclick="scrollThumbnails(1)">→</button>
+        </div>
+      </section>
+
+      <section class="property-description-section">
+        <div class="property-container">
+          <!-- Description -->
+          <div class="description-box">
+            <h2>Description</h2>
+            <p>
+              Welcome to Metricon Oasis, an iconic residential development set on 1.1 acres along the serene Mbaazi Road in Lavington, Nairobi. Comprising three elegant 17-floor towers, this high-rise community offers a curated selection of 1, 2, and 3-bedroom apartments, each thoughtfully designed with modern layouts, premium finishes, and an emphasis on both comfort and functionality. Whether you're seeking a stylish urban home or a high-potential investment, Metricon Oasis delivers an exceptional living experience in one of Nairobi’s most prestigious neighborhoods.
+            </p>
+            <p>
+              Designed for the modern dweller, Metricon Oasis harmonizes contemporary elegance with practical urban convenience. Residents enjoy proximity to top schools, shopping malls, hospitals, and major road networks, making it an ideal address for professionals, families, and investors alike. With its sophisticated design, strategic location, and strong capital growth prospects, Metricon Oasis redefines luxury living in Nairobi.
+            </p>
+          </div>
+
+          <hr />
+
+          <!-- Address -->
+          <div class="address-box">
+            <h2>Address</h2>
+            <ul class="address-details">
+              <li><strong>Name</strong>: Oasis Metricon Home</li>
+              <li><strong>City</strong>: Nairobi</li>
+              <li><strong>Area</strong>: Lavington</li>
+              <li><strong>Date Of Completion</strong>: May 2027</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <!-- Details -->
+          <div class="details-box">
+            <h2>1 Bedroom Apartment</h2>
+            <ul class="details">
+              <li><strong>Price</strong>: $ 58,800.00</li>
+              <li><strong>Size</strong>: 645.83 sqft</li>
+              <li><strong>Monthly Installment</strong>: $ 0.00</li>
+              <li><strong>Deposit Required</strong>: 20% </li>
+              <li><strong>Service Fees</strong>: $ 0.00/Month</li>
+              <li><strong>Interest Rates</strong>: 0.00%</li>
+              <li><strong>Payment Plan Duration</strong>: 0 Months</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div class="details-box">
+            <h2>2 Bedroom Apartment</h2>
+            <ul class="details">
+              <li><strong>Price</strong>: $ 82,011.00</li>
+              <li><strong>Size</strong>: 914.93 sqft</li>
+              <li><strong>Monthly Installment</strong>: $ 0.00</li>
+              <li><strong>Deposit Required</strong>: 20% </li>
+              <li><strong>Service Fees</strong>: $ 0.00/Month</li>
+              <li><strong>Interest Cost</strong>: 0.00%</li>
+              <li><strong>Payment Plan Duration</strong>: 0 Months</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <!-- Amenities -->
+          <div class="amenities-box">
+            <h2>Amenities</h2>
+            <ul class="amenities-details">
+              <li><i class="fas fa-swimming-pool"></i> Swimming Pool</li>
+              <li><i class="fas fa-door-closed"></i> Exclusive Clubhouse</li>
+              <li><i class="fas fa-car"></i> Ample Parking</li>
+              <li><i class="fas fa-bolt"></i> Full Generator & Borehole Backup</li>
+              <li><i class="fas fa-shield-alt"></i> 24/7 CCTV Security</li>
+              <li><i class="fas fa-elevator"></i> High-Speed Lifts</li>
+              <li><i class="fas fa-child"></i> Children’s Play Area</li>
+            </ul>
+
+          </div>
+        </div>
+
+        <section class="map-section">
+          <h2>Location</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7977.606070490711!2d36.75447237770996!3d-1.292600400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b4f24138b3f%3A0xa688ce3655926a8d!2sMetricon%20Oasis!5e0!3m2!1sen!2ske!4v1752073899082!5m2!1sen!2ske"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Map showing location of Metricon Oasis in Lavington, Nairobi, Kenya"
+            ></iframe>
+            <p>PQ47+X95, Mbaazi Rd, Nairobi</p>
+          </div>
+        </section>
+
+        <!-- Video Section -->
+        <div class="video-box">
+          <h2>Property Tour</h2>
+          <div class="video-wrapper">
+            <div class="video-container">
+              <video id="propertyVideo" playsinline>
+                <source src="/Images/Oasis/" type="video/mp4">
+                <p>Your browser does not support the video tag. Please try a modern browser like Chrome, Firefox, or Safari, or download the video <a href="Images/Oasis/">here</a>.</p>
+              </video>
+              <button id="playButton">
+                <i class="fa fa-play" style="color: white; font-size: 32px;"></i>
+              </button>
+              <div class="video-controls">
+                <input type="range" class="seek-bar" min="0" max="100" value="0">
+                <span class="video-time">00:00 / 00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+      <div class="back-to-top-icon">↑</div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <div id="footer"></div>
+
+  <!-- External JavaScript -->
+  <script src="/Js/property.js"></script>
+</body>
+</html>

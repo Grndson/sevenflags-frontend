@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symphony Residence - Seven Flags</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/Styles/property.css" />
+  <link rel="stylesheet" href="/Styles/header.css" />
+  <link rel="stylesheet" href="/Styles/footer.css" />
+  <link rel="icon" type="image/png" href="/Images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/Images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/Images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Seven Flags">
+  <link rel="manifest" href="/Images/favicon/site.webmanifest">
+  <script src="/Js/layout.js" defer></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <div id="header"></div>
+
+  <main>
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section">
+      <div class="breadcrumb-container">
+        <div class="breadcrumb-wrapper">
+          <div class="breadcrumb-links">
+            <a href="index.html" class="breadcrumb-link">Home</a>
+            <span class="breadcrumb-divider">/</span>
+            <a href="properties.html" class="breadcrumb-link">Properties</a>
+            <span class="breadcrumb-divider">/</span>
+            <span class="breadcrumb-current">Property Details</span>
+          </div>
+          <div class="breadcrumb-title-wrap">
+            <h1 class="breadcrumb-title">Symphony Residence</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section class="carousel-section">
+        <img src="/Images/Sympony/Sympony.webp" alt="Background" class="background-image" />
+        <div class="carousel-container">
+          <button class="scroll-btn left" onclick="scrollThumbnails(-1)">←</button>
+          <div class="thumbnails" id="thumbnails">
+            <img src="/Images/Sympony/Symphony3.webp" alt="Photo 1" />
+            <img src="/Images/Sympony/Sympony Living.webp" alt="Photo 2" />
+            <img src="/Images/Sympony/Symphony2.webp" alt="Photo 3" />
+            <img src="/Images/Sympony/Sympony.webp" alt="Photo 4" />
+            <img src="/Images/Sympony/Symphonypool.webp" alt="Photo 5" />
+            <img src="/Images/Sympony/Spmhonyfitness.webp" alt="Photo 6" />
+          </div>
+          <button class="scroll-btn right" onclick="scrollThumbnails(1)">→</button>
+        </div>
+      </section>
+
+      <section class="property-description-section">
+        <div class="property-container">
+          <!-- Description -->
+          <div class="description-box">
+            <h2>Description</h2>
+            <p>
+              Symphony Residence is a masterfully designed residential development that offers a harmonious blend of luxury, comfort, and investment opportunity. Featuring a variety of units from studios to spacious 3-bedroom apartments, this development is tailored for modern urban living. Each apartment showcases pastel-toned interiors, abundant natural lighting, and high-end finishes that reflect architectural excellence and refined aesthetics.
+            </p>
+            <p>
+              Ideally located near Junction Mall in one of Nairobi’s most vibrant neighborhoods, Symphony Residence combines serene living with city convenience. Residents enjoy access to premium amenities including a rooftop lounge, swimming pool, fitness center, and secure gated entry. Whether you're a homeowner seeking tranquility or an investor eyeing strong rental yields, Symphony Residence delivers timeless value in every detail.
+            </p>
+          </div>
+
+          <hr />
+
+          <!-- Address -->
+          <div class="address-box">
+            <h2>Address</h2>
+            <ul class="address-details">
+              <li><strong>Name</strong>: Symphony Residence</li>
+              <li><strong>City</strong>: Nairobi</li>
+              <li><strong>Date Of Completion</strong>: September 2026</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <!-- Details -->
+          <div class="details-box">
+            <h2>1 Bedroom Apartment</h2>
+            <ul class="details">
+              <li><strong>Price</strong>: $ 62,394.00</li>
+              <li><strong>Size</strong>: 441.32 sqft</li>
+              <li><strong>Monthly Installment</strong>: $ 1,750.50</li>
+              <li><strong>Deposit Required</strong>: 30% </li>
+              <li><strong>Service Fees</strong>: $ 62.00/Month</li>
+              <li><strong>Interest Rates</strong>: 1.00%</li>
+              <li><strong>Payment Plan Duration</strong>: 36 Months</li>
+              <li><strong>ROI</strong>: 16%</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div class="details-box">
+            <h2>2 Bedroom Apartment</h2>
+            <ul class="details">
+              <li><strong>Price</strong>: $ 151,445.00</li>
+              <li><strong>Size</strong>: 1,173.27 sqft</li>
+              <li><strong>Monthly Installment</strong>: $ 4,248.87</li>
+              <li><strong>Deposit Required</strong>: 30% </li>
+              <li><strong>Service Fees</strong>: $ 77.00/Month</li>
+              <li><strong>Interest Cost</strong>: 1.00%</li>
+              <li><strong>Payment Plan Duration</strong>: 36 Months</li>
+              <li><strong>ROI</strong>: 16%</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <!-- Amenities -->
+          <div class="amenities-box">
+            <h2>Amenities</h2>
+           <ul class="amenities-details">
+              <li><i class="fas fa-swimming-pool"></i> Heated Swimming Pools </li>
+              <li><i class="fas fa-dumbbell"></i> Fully Equipped Gyms </li>
+              <li><i class="fas fa-running"></i> Rooftop Walking Track & Lounge</li>
+              <li><i class="fas fa-gamepad"></i> Game Room & Kids Play Area</li>
+              <li><i class="fas fa-concierge-bell"></i> Reception & Concierge Service</li>
+              <li><i class="fas fa-handshake"></i> Meeting Rooms & Lounge </li>
+              <li><i class="fas fa-tree"></i> Landscaped Gardens, & Terraces</li>
+              <li><i class="fas fa-bolt"></i> Backup Generator & Borehole </li>
+              <li><i class="fas fa-elevator"></i> High-Speed Elevators</li>
+              <li><i class="fas fa-video"></i> CCTV & Smart Access</li>
+              <li><i class="fas fa-solar-panel"></i> Solar Water Heating </li>
+              <li><i class="fas fa-coffee"></i> On-Site Café & Lounge Spaces</li>
+              <li><i class="fas fa-briefcase"></i> Co‑working Business Center</li>
+              <li><i class="fas fa-film"></i> Private Cinema</li>
+              <li><i class="fas fa-spa"></i> Spa, Sauna & Wellness Facility</li>
+            </ul>
+
+          </div>
+        </div>
+
+        <section class="map-section">
+          <h2>Location</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.795614542952!2d36.760631474892264!3d-1.297315798690347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b6b6a9c14e3%3A0x8d034ccc95f6add7!2sSymphony%20Residence!5e0!3m2!1sen!2ske!4v1752074123369!5m2!1sen!2ske"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Map showing location of Symphony Residence in Kilimani, Nairobi, Kenya"
+            ></iframe>
+            <p>Nairobi</p>
+          </div>
+        </section>
+
+        <!-- Video Section -->
+        <div class="video-box">
+          <h2>Property Tour</h2>
+          <div class="video-wrapper">
+            <div class="video-container">
+              <video id="propertyVideo" playsinline>
+                <source src="/Images/Sympony/Show House Video.mp4" type="video/mp4">
+                <p>Your browser does not support the video tag. Please try a modern browser like Chrome, Firefox, or Safari, or download the video <a href="Images/Sympony/Show House Video.mp4">here</a>.</p>
+              </video>
+              <button id="playButton">
+                <i class="fa fa-play" style="color: white; font-size: 32px;"></i>
+              </button>
+              <div class="video-controls">
+                <input type="range" class="seek-bar" min="0" max="100" value="0">
+                <span class="video-time">00:00 / 00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+      <div class="back-to-top-icon">↑</div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <div id="footer"></div>
+
+  <!-- External JavaScript -->
+  <script src="/Js/property.js"></script>
+</body>
+</html>
