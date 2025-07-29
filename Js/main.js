@@ -1,10 +1,23 @@
-// Load header and footer content
+import { initializeHeader, initializeFooter } from './layout.js';
+import * as features from './features.js';
+
+// Preload header and footer
+let headerPromise = null;
+let footerPromise = null;
+
+function startPreloading() {
+  headerPromise = fetch('header.html').then(response => {
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    return response.text();
+  });
+  footerPromise = fetch('footer.html').then(response => {
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    return response.text();
+  });
+}
+
 function loadHeader() {
-  fetch('header.html')
-    .then(response => {
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-      return response.text();
-    })
+  headerPromise
     .then(data => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(data, 'text/html');
@@ -22,13 +35,7 @@ function loadHeader() {
 }
 
 function loadFooter() {
-  fetch('footer.html')
-    .then(response => {
-      if (!response.ok) throw
-
- new Error(`HTTP error! status: ${response.status}`);
-      return response.text();
-    })
+  footerPromise
     .then(data => {
       document.getElementById('footer').innerHTML = data;
       initializeFooter();
@@ -36,45 +43,6 @@ function loadFooter() {
     .catch(error => console.error('Error loading footer:', error));
 }
 
-// Initialize header functionality (hamburger menu)
-function initializeHeader() {
-  const hamburger = document.querySelector('.hamburger');
-  const navbar = document.querySelector('.navbar');
-  if (hamburger && navbar) {
-    hamburger.addEventListener('click', (e) => {
-      e.preventDefault();
-      navbar.classList.toggle('active');
-      hamburger.textContent = navbar.classList.contains('active') ? '✕' : '☰';
-    });
-
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navbar.classList.remove('active');
-        hamburger.textContent = '☰';
-      });
-    });
-
-    document.addEventListener('click', (event) => {
-      if (!hamburger.contains(event.target) && !navbar.contains(event.target)) {
-        navbar.classList.remove('active');
-        hamburger.textContent = '☰';
-      }
-    });
-  }
-}
-
-// Initialize footer functionality (newsletter form)
-function initializeFooter() {
-  const newsletterForm = document.querySelector('.footer-section.newsletter form');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      console.log('Newsletter signup submitted');
-    });
-  }
-}
-
-// Highlight active navigation link
 function highlightActiveNavLink() {
   const currentPath = window.location.pathname;
   const currentPage = currentPath.split('/').pop() || 'index.html';
@@ -101,9 +69,9 @@ function highlightActiveNavLink() {
   });
 }
 
-// Back to Top Button Functionality
 function initializeBackToTop() {
   const backToTopButton = document.getElementById('backToTop');
+  if (!backToTopButton) return;
   let hasAnimated = false;
 
   window.addEventListener('scroll', () => {
@@ -125,33 +93,18 @@ function initializeBackToTop() {
   });
 }
 
-// Preload header and footer
-let headerPromise = null;
-let footerPromise = null;
-
-function startPreloading() {
-  headerPromise = fetch('header.html').then(response => {
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    return response.text();
-  });
-
-  footerPromise = fetch('footer.html').then(response => {
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    return response.text();
-  });
-}
-
-// Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM loaded, loading header and footer...');
+  console.log('DOM loaded, initializing...');
+  startPreloading();
   loadHeader();
   loadFooter();
   initializeBackToTop();
-  startPreloading();
+  features.initializeFeatures(window.location.pathname);
 });
 
-// Fallback for active link after full page load
 window.addEventListener('load', () => {
-  console.log('Window loaded, attempting fallback active link...');
+  console.log('Window loaded, checking active link...');
   setTimeout(highlightActiveNavLink, 200);
 });
+
+export { startPreloading };

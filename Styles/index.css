@@ -358,7 +358,8 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 
 .cta-button {
   display: inline-block;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  background: linear-gradient(135deg, #A1773D 0%, #F5E6A3 50%, #A1773D 100%);
+  box-shadow: 0 8px 20px rgba(161, 119, 61, 0.4);
   color: var(--black);
   padding: 20px 50px;
   border-radius: 100px;
@@ -368,7 +369,6 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
   font-size: 1.2em;
   letter-spacing: 0.5px;
   transition: all 0.4s ease;
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
   position: relative;
   overflow: hidden;
   margin-top: 40px;        
@@ -495,9 +495,9 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 }
 
 .card-icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 20px;
+  font-size: 36px;
+  color: #A1773D; /* Match your brand color */
+  margin-bottom: 12px;
 }
 
 .card-content h3 {
@@ -532,7 +532,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 
 /* ===== MORTGAGE CALCULATOR SECTION ===== */
 .mortgage-calculator {
-  background-color: #fff8e1;
+  background-color: var(--black);
   padding: 80px 20px;
   font-family: var(--body-font);
 }
@@ -582,7 +582,8 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 
 .calculate-button {
   display: block;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  background: linear-gradient(135deg, #A1773D 0%, #F5E6A3 50%, #A1773D 100%);
+  box-shadow: 0 8px 20px rgba(161, 119, 61, 0.4);
   color: var(--black);
   padding: 20px 50px;
   border-radius: 100px;
@@ -592,7 +593,6 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
   font-size: 1.2em;
   letter-spacing: 0.5px;
   transition: all 0.4s ease;
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
   overflow: hidden;
   margin: 40px auto; 
   border: 2px solid var(--main-color); 
@@ -803,7 +803,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 
 .amenity-card .icon {
   font-size: 36px;
-  color: var(--gold);
+  color: #a1773d;
   margin-bottom: 10px;
 }
 
@@ -823,7 +823,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
   right: 30px;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  background: linear-gradient(135deg, #A1773D 0%, #F5E6A3 50%, #A1773D 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -831,7 +831,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
   cursor: pointer;
   transition: all 0.4s ease;
   z-index: 1000;
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 20px rgba(161, 119, 61, 0.4);
   border: 2px solid transparent;
   opacity: 0;
   visibility: hidden;

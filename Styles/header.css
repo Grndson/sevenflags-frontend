@@ -35,7 +35,7 @@ body {
     margin: 3px auto 0 auto;
     padding: 15px 20px;
     border-radius: 16px;
-    background: rgba(117, 116, 116, 0.9);
+    background: rgba(30, 30, 30, 0.9);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -52,30 +52,32 @@ body {
     flex-shrink: 0;
 }
 
+.website-logo a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* SVG Logo Styles - Optimized for all devices */
 .logo-image {
     height: 40px;
     width: auto;
     max-width: none;
     
-    /* Optimal rendering properties */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-    
-    /* Better quality scaling */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    /* SVG-specific optimizations */
+    display: block;
     
     /* Smooth transitions */
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.2s ease;
     
-    /* Force hardware acceleration for smoother rendering */
-    transform: translateZ(0);
-    will-change: transform;
+    /* Ensure crisp rendering */
+    shape-rendering: geometricPrecision;
+    text-rendering: optimizeLegibility;
 }
 
 .logo-image:hover {
-    opacity: 0.8;
+    opacity: 0.85;
+    transform: scale(1.02);
 }
 
 .hamburger {
@@ -87,6 +89,11 @@ body {
     cursor: pointer;
     padding: 5px;
     z-index: 1101;
+    transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+    color: var(--gold);
 }
 
 /* Navigation Styles */
@@ -150,14 +157,9 @@ body {
         height: 50px;
     }
 
+    /* Mobile logo sizing */
     .logo-image {
         height: 36px;
-        width: auto;
-        
-        /* Mobile-specific rendering */
-        image-rendering: -webkit-optimize-contrast;
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
     }
 
     .hamburger {
@@ -171,6 +173,21 @@ body {
     .navbar a {
         font-size: 19px;
         text-align: center;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .top-bar {
+        padding: 12px 20px;
+    }
+
+    .logo-image {
+        height: 32px;
+    }
+
+    .hamburger {
+        font-size: 24px;
     }
 }
 
@@ -205,21 +222,10 @@ body {
     }
 }
 
-/* High DPI displays (Retina, etc.) */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+/* Extra large screens */
+@media screen and (min-width: 1600px) {
     .logo-image {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-        
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-}
-
-/* Ultra-high DPI displays */
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .logo-image {
-        height: 38px;
+        height: 45px;
     }
 }
 
@@ -282,5 +288,12 @@ body {
     .navbar a:hover,
     .navbar a.active {
         border-bottom-color: #b8860b;
+    }
+}
+
+/* Print styles */
+@media print {
+    .logo-image {
+        height: 30px;
     }
 }

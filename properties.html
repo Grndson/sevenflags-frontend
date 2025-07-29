@@ -8,20 +8,12 @@
   <link rel="stylesheet" href="/Styles/properties.css">
   <link rel="stylesheet" href="/Styles/header.css">
   <link rel="stylesheet" href="/Styles/footer.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="icon" type="image/png" href="/Images/favicon/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/svg+xml" href="/Images/favicon/favicon.svg">
   <link rel="shortcut icon" href="/Images/favicon/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-title" content="Seven Flags">
   <link rel="manifest" href="/Images/favicon/site.webmanifest">
-  <link rel="preload" href="header.html" as="fetch" crossorigin>
-  <link rel="preload" href="footer.html" as="fetch" crossorigin>
-  <script src="/Js/layout.js" defer></script> 
-  <script src="/Js/featured.js" defer></script>
-  <script src="/Js/properties.js" defer></script>
-  <!-- Start preloading header and footer -->
-  <script>startPreloading();</script>
 </head>
 <body>
   <!-- Header Section -->
@@ -223,7 +215,7 @@
           <div class="form-row two-columns">
             <div class="form-group">
               <label for="full-name">Full Name</label>
-              <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required>
+              <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
@@ -249,5 +241,9 @@
 
   <!-- Footer Section -->
   <div id="footer"></div>
+
+  <!-- External JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="/Js/main.js"></script>
 </body>
 </html>

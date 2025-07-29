@@ -14,7 +14,7 @@
         <div class="footer-section about">
             <div class="footer-logo">
                 <a href="index.html" aria-label="Seven Flags Home">
-                    <img src="/Images/Icons/Seven Flags Logo 1.svg" 
+                    <img src="/Images/Icons/SF_Logo.svg" 
                          alt="Logo" 
                          class="logo-image"
                          loading="lazy"
@@ -53,7 +53,7 @@
                         <a href="mailto:Invest@SevenFlags.World">Invest@SevenFlags.World</a>
                     </div>
                 </li>
-                </li>
+                <li>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 
                     <span>Nairobi, Kenya</span>
@@ -64,13 +64,10 @@
 
         <div class="footer-section newsletter">
             <h4>Newsletter</h4>
-            <form id="newsletter-form" novalidate>
-                <input type="email" 
-                       id="newsletter-email"
-                       placeholder="Your Email" 
-                       required 
-                       aria-label="Email address for newsletter subscription" />
-                <button type="submit" aria-label="Subscribe to newsletter">Submit</button>
+             <form id="newsletter-form">
+                <input type="hidden" name="formType" value="Newsletter" />
+                <input type="email" id="newsletter-email" name="email" placeholder="Your email address">
+                <button type="submit">Subscribe</button>
             </form>
         </div>
     </div>
@@ -97,13 +94,6 @@
                target="_blank" 
                rel="noopener noreferrer">
                 <i class="fa-brands fa-threads" aria-hidden="true"></i>
-            </a>
-            <a href="#" 
-               title="Follow us on TikTok" 
-               aria-label="TikTok"
-               target="_blank" 
-               rel="noopener noreferrer">
-                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
             </a>
         </div>
         <p>&copy; 2025 Seven Flags. All rights reserved.</p>

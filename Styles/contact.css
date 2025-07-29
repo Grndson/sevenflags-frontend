@@ -215,14 +215,14 @@ textarea {
 }
 
 .chip input[type="radio"]:checked + span {
-  background-color: #b8860b;
-  color: white;
+  color: #A1773D;
 }
 
 .submit-button {
   align-self: center;
   padding: 12px 32px;
-  background: linear-gradient(135deg, #b48a0a 0%, #e2c165 100%);
+  background: linear-gradient(135deg, #A1773D 0%, #F5E6A3 50%, #A1773D 100%);
+  box-shadow: 0 8px 20px rgba(161, 119, 61, 0.4);
   color: var(--white);
   font-size: 16px;
   font-family: var(--body-font);
@@ -233,7 +233,6 @@ textarea {
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(180, 138, 10, 0.3);
 }
 
 .submit-button::before {
@@ -391,7 +390,7 @@ textarea {
   right: 30px;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #d4af37, #f4d03f);
+  background: linear-gradient(135deg, #A1773D 0%, #F5E6A3 50%, #A1773D 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -399,7 +398,7 @@ textarea {
   cursor: pointer;
   transition: all 0.4s ease;
   z-index: 1000;
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 20px rgba(161, 119, 61, 0.4);
   border: 2px solid transparent;
   opacity: 0;
   visibility: hidden;

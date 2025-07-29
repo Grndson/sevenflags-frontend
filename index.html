@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="icon" type="image/png" href="/Images/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/Images/favicon/favicon.svg" />
   <link rel="shortcut icon" href="/Images/favicon/favicon.ico" />
@@ -16,8 +16,6 @@
   <link rel="stylesheet" href="/Styles/header.css" />
   <link rel="stylesheet" href="/Styles/index.css" />
   <link rel="stylesheet" href="/Styles/footer.css" />
-  <script src="/Js/script.js" defer></script>
-  <script src="/Js/layout.js" defer></script>
   <title>SevenFlags Real Estate</title>
 </head>
 
@@ -179,7 +177,7 @@
       <div class="card-container">
         <!-- Buy a Home -->
         <div class="card">
-          <img src="/Icons/Sell Home Icon.svg" alt="Buy a Home Icon" class="card-icon">
+          <i class="fas fa-house-user card-icon" aria-hidden="true"></i>
           <div class="card-content">
             <h3>Buy a Home</h3>
             <p>Explore a wide range of homes tailored to your needs and budget. Find your perfect match today with us.</p>
@@ -189,7 +187,7 @@
 
         <!-- Rent a Home -->
         <div class="card">
-          <img src="/Icons/Rent Home Section.svg" alt="Rent a Home Icon" class="card-icon">
+          <i class="fas fa-key card-icon" aria-hidden="true"></i>
           <div class="card-content">
             <h3>Rent a Home</h3>
             <p>Discover affordable rentals in prime locations. Flexible terms and verified listings for peace of mind.</p>
@@ -199,15 +197,15 @@
 
         <!-- Invest in Property -->
         <div class="card">
-          <img src="/Icons/Finance Home Icon.svg" alt="Invest in Property Icon" class="card-icon">
+          <i class="fas fa-chart-line card-icon" aria-hidden="true"></i>
           <div class="card-content">
             <h3>Invest in Property</h3>
             <p>Unlock high-return investment opportunities in growing markets. Start building your real estate portfolio.</p>
           </div>
           <a href="invest.html" class="learn-more-btn">Learn More </a>
         </div>
-
       </div>
+
     </section>
     
     <section class="mortgage-calculator">
@@ -294,6 +292,7 @@
         </button>
         <button class="arrow-btn" onclick="scrollTestimonials(1)" title="Next testimonial" aria-label="Next testimonial">
           <i class="fas fa-chevron-right"></i>
+        </button>  
       </div>
     </section>
 
@@ -326,6 +325,8 @@
 
   <!-- Footer Section -->
   <div id="footer"></div>
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="module" src="/Js/main.js"></script>
 </body>
 </html>
