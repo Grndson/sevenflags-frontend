@@ -7,21 +7,18 @@
 
 :root {
   --main-color: #b8860b;
-  --black: #000;
-  --white: #fff;
+  --black: #1A1A1A;
+  --white: #FFFFFF;
   --gray: #666;
-  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
-  --font-family: 'Inter', sans-serif;
+  --gray-light: #F8F8F8;
+  --gray-dark: #333333;
   --gold: #D4AF37;
   --gold-light: #F4E5A1;
   --gold-dark: #B8941F;
-  --black: #1A1A1A;
-  --white: #FFFFFF;
-  --gray-light: #F8F8F8;
-  --gray-dark: #333333;
-    --header-font: 'Playfair Display', serif;
-    --body-font: 'Inter', sans-serif;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --header-font: 'Playfair Display', serif;
+  --body-font: 'Inter', sans-serif;
 }
 
 html {
@@ -51,7 +48,7 @@ a {
 }
 
 a:hover {
-  color: #b8860b;
+  color: var(--gold);
 }
 
 /* Breadcrumb Styles */
@@ -135,7 +132,7 @@ a:hover {
 /* Contact Section */
 .contact-form-section {
   padding: 60px 20px;
-  background-color: gray;
+  background-color: var(--black); /* Dark background for luxury */
 }
 
 .contact-container {
@@ -146,6 +143,11 @@ a:hover {
   align-items: flex-start;
   max-width: 1200px;
   margin: auto;
+  background: rgba(255, 255, 255, 0.05); /* Subtle transparent backdrop */
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid var(--gold-dark);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .contact-image img {
@@ -163,32 +165,53 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: #f9f9f9;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-label {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
+.contact-form label {
+  font-family: var(--header-font);
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--gold-light);
+  line-height: 1.8;
+  letter-spacing: 0.8px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
   width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--body-font);
+  font-size: 1.1em;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.1); /* Subtle transparent input background */
+  color: var(--gold-light);
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-textarea {
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input[type="text"]::placeholder,
+.contact-form input[type="email"]::placeholder,
+.contact-form input[type="tel"]::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--gray);
+  opacity: 0.7;
+}
+
+.contact-form textarea {
   min-height: 100px;
   resize: vertical;
 }
@@ -204,10 +227,17 @@ textarea {
   display: flex;
   align-items: center;
   padding: 8px 12px;
-  background-color: #eee;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--gold-dark);
   border-radius: 30px;
   cursor: pointer;
   font-size: 14px;
+  color: var(--gold-light);
+  transition: all 0.3s ease;
+}
+
+.chip:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .chip input[type="radio"] {
@@ -215,7 +245,7 @@ textarea {
 }
 
 .chip input[type="radio"]:checked + span {
-  color: #A1773D;
+  color: var(--gold);
 }
 
 .submit-button {
@@ -223,7 +253,7 @@ textarea {
   padding: 12px 32px;
   background: linear-gradient(135deg, #A1773D 0%, #F5E6A3 50%, #A1773D 100%);
   box-shadow: 0 8px 20px rgba(161, 119, 61, 0.4);
-  color: var(--white);
+  color: var(--black);
   font-size: 16px;
   font-family: var(--body-font);
   font-weight: 500;
@@ -258,6 +288,7 @@ textarea {
 .submit-button:active {
   transform: translateY(0);
 }
+
 /* Map Section */
 .map-section {
   margin: 0;

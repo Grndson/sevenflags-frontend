@@ -153,44 +153,165 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 
 /* ===== FEATURED LISTINGS SECTION ===== */
 .featured-listings {
-  position: relative;
-  z-index: 10;
   padding: 80px 20px;
   background-color: var(--gray-light);
   text-align: center;
-  overflow: visible;
   font-family: var(--body-font);
+  overflow: hidden;
 }
 
 .featured-listings h2 {
   font-family: var(--header-font);
   font-size: 3rem;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   color: var(--gold);
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-.swiper {
+.featuredSwiper {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 20px;
-  position: relative;
-}
-
-.swiper-wrapper {
-  display: flex;
-  align-items: center;
+  padding: 0 10px 60px;
+  overflow: visible;
 }
 
 .swiper-slide {
-  width: 380px;
-  height: 400px;
+  width: 360px;
+  height: auto;
   display: flex;
   justify-content: center;
+  align-items: stretch;
+}
+
+.property-card-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.property-card-link:hover {
+  transform: translateY(-5px);
+}
+
+.property-card {
+  width: 100%;
+  height: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-position: center;
+}
+
+.property-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.property-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: var(--white);
+}
+
+.price-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: linear-gradient(135deg, #A1773D 0%, #F5E6A3 50%, #A1773D 100%);
+  color: var(--black);
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+}
+
+.property-meta {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(41, 40, 40, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--white);
+  padding: 8px 12px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.property-meta .area,
+.property-meta .city {
+  display: block;
+  line-height: 1.3;
+}
+
+.house-details {
+  margin-top: auto;
+  text-align: left;
+}
+
+.house-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #D4AF37 0%, #F5E6A3 50%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.property-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.property-features li {
+  display: flex;
   align-items: center;
-  flex-shrink: 0;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.property-features i {
+  font-size: 1rem;
+  color: #f59e0b;
 }
 
 .swiper-button-next,
@@ -198,14 +319,16 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
   color: var(--gold);
   background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 20;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .swiper-button-next::after,
@@ -218,7 +341,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 .swiper-button-prev:hover {
   background: var(--gold);
   color: var(--white);
-  transform: scale(1.1);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .swiper-button-next {
@@ -229,150 +352,22 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
   left: 0;
 }
 
-.property-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  transition: transform 0.3s ease;
-  width: 100%;
-  height: 100%;
-}
-
-.property-card-link:hover {
-  transform: translateY(-5px);
-}
-
-.property-card {
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: var(--transition);
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.property-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.property-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
-}
-
-.property-card:hover::before {
-  opacity: 1;
-}
-
-.price-badge {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: var(--main-color);
-  color: var(--white);
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 1.1em;
-  font-weight: 600;
-  z-index: 3;
-  letter-spacing: 0.5px;
-}
-
-.property-meta {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: var(--white);
-  background: rgba(0, 0, 0, 0.7);
-  padding: 8px 14px;
-  border-radius: 100px;
-  font-size: 0.9em;
-  display: flex;
-  font-weight: 500;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  flex-direction: column;
-  align-items: flex-end;
-  z-index: 3;
-  letter-spacing: 0.5px;
-}
-
-.house-details {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  padding: 20px;
-  color: var(--white);
-  z-index: 2;
-  text-align: left;
-}
-
-.house-name {
-  font-family: var(--header-font);
-  font-size: 1.4em;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: var(--white);
-  text-align: left;
-  letter-spacing: 1px;
-}
-
-.property-features {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 0.9em;
-  margin: 0;
-  padding: 0;
-  line-height: 1.8;
-  letter-spacing: 0.5px;
-}
-
-.property-features li {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--white);
-}
-
-.property-features li i {
-  color: var(--gold);
-}
-
 .cta-button {
   display: inline-block;
   background: linear-gradient(135deg, #A1773D 0%, #F5E6A3 50%, #A1773D 100%);
   box-shadow: 0 8px 20px rgba(161, 119, 61, 0.4);
   color: var(--black);
-  padding: 20px 50px;
-  border-radius: 100px;
-  text-decoration: none;
+  padding: 16px 40px;
+  border-radius: 50px;
   font-family: var(--body-font);
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.1rem;
   letter-spacing: 0.5px;
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  margin-top: 40px;        
-  border: 2px solid var(--main-color);      
+  margin-top: 20px;
+  border: 2px solid var(--main-color);
 }
 
 .cta-button::before {
@@ -448,91 +443,9 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 }
 
 
-/* ===== REAL ESTATE EXPERIENCE SECTION ===== */
-.real-estate-experience {
-  padding: 80px 20px;
-  background-color: var(--gray-light);
-  text-align: center;
-}
-
-.section-header h2 {
-  font-family: var(--header-font);
-  font-size: 3rem;
-  font-weight: 600;
-  color: var(--gold);
-  margin: 40px 0 16px;
-  letter-spacing: 1px;
-}
-
-.section-header p {
-  font-family: var(--body-font);
-  font-size: 1.1em;
-  font-weight: 500;
-  color: var(--gray-dark);
-  line-height: 1.8;
-  max-width: 610px;
-  margin: 0 auto 40px;
-  letter-spacing: 0.5px;
-}
-
-.card-container {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
-}
-
-.card {
-  background-color: #fffaf0;
-  border: 1px solid rgba(184, 134, 11, 0.1);
-  border-radius: 16px;
-  width: 400px;
-  height: 390px;
-  padding: 27px;
-  text-align: left;
-  position: relative;
-}
-
-.card-icon {
-  font-size: 36px;
-  color: #A1773D; /* Match your brand color */
-  margin-bottom: 12px;
-}
-
-.card-content h3 {
-  font-family: var(--header-font);
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--gold);
-  margin: 38px 0 20px;
-  letter-spacing: 1px;
-}
-
-.card-content p {
-  font-family: var(--body-font);
-  font-size: 1.1em;
-  color: var(--gray-dark);
-  line-height: 1.8;
-  text-align: left;
-  letter-spacing: 0.5px;
-}
-
-.learn-more-btn {
-  display: inline-block;
-  margin-top: 43px;
-  font-family: var(--body-font);
-  font-size: 1.1em;
-  font-weight: 600;
-  color: var(--gold);
-  cursor: pointer;
-  text-decoration: none;
-  letter-spacing: 0.5px;
-}
-
 /* ===== MORTGAGE CALCULATOR SECTION ===== */
 .mortgage-calculator {
-  background-color: var(--black);
+  background-color: var(--white);
   padding: 80px 20px;
   font-family: var(--body-font);
 }
@@ -633,7 +546,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 /* ===== TESTIMONIALS SECTION ===== */
 .testimonials-section {
   padding: 80px 20px;
-  background-color: #f8f9fa;
+  background-color: var(--black);
   text-align: center;
 }
 
@@ -649,7 +562,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 .testimonials-section .subtitle {
   font-family: var(--body-font);
   font-size: 1.2em;
-  color: var(--gray-dark);
+  color: var(--white);
   margin-bottom: 30px;
   line-height: 1.8;
   letter-spacing: 0.5px;
@@ -743,7 +656,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 /* ===== AMENITIES SECTION ===== */
 .amenities-section {
   background-color: var(--gray-light);
-  padding: 10px 20px;
+  padding: 80px 20px;
   font-family: var(--body-font);
 }
 
@@ -880,6 +793,86 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+  .featured-listings {
+    padding: 60px 16px;
+  }
+
+  .featured-listings h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .swiper-slide {
+    width: 320px;
+  }
+
+  .property-card {
+    height: 440px;
+  }
+
+  .house-name {
+    font-size: 1.6rem;
+  }
+
+  .price-badge {
+    font-size: 0.95rem;
+    padding: 7px 14px;
+  }
+
+  .property-meta {
+    font-size: 0.85rem;
+    padding: 7px 10px;
+  }
+
+  .property-features li {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+  }
+
+  .testimonials-section {
+    padding: 60px 16px;
+  }
+
+  .testimonials-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .testimonial-container {
+    gap: 12px;
+  }
+
+  .testimonial-card {
+    min-width: 260px;
+    max-width: 260px;
+    padding: 12px;
+  }
+
+  .testimonial-card .quote-icon {
+    font-size: 36px;
+  }
+
+  .testimonial-card p {
+    font-size: 0.95em;
+    margin: 12px 0;
+  }
+
+  .testimonial-card h4 {
+    font-size: 1em;
+  }
+
+  .testimonial-controls {
+    margin-top: 24px;
+    gap: 12px;
+  }
+
+  .arrow-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-tagline {
     font-size: 2rem;
@@ -907,9 +900,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
   }
 
   .services-section h2,
-  .featured-listings h2,
   .section-header h2,
-  .testimonials-section h2,
   .amenities-header h2 {
     font-size: 2.25rem;
   }
@@ -924,39 +915,117 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .featured-listings {
+    padding: 40px 12px;
+  }
+
+  .featured-listings h2 {
+    font-size: 2.25rem;
+    margin-bottom: 30px;
+  }
+
+  .featuredSwiper {
+    padding: 0 8px 40px;
+  }
+
   .swiper-slide {
     width: 300px;
-    height: 350px;
   }
 
-      .price-badge {
-    top: 15px;
-    left: 15px;
+  .property-card {
+    height: 400px;
+  }
+
+  .card-content {
+    padding: 16px;
+  }
+
+  .house-name {
+    font-size: 1.4rem;
+  }
+
+  .price-badge {
+    top: 12px;
+    left: 12px;
+    font-size: 0.9rem;
     padding: 6px 12px;
-    font-size: 0.95em;
-    border-radius: 15px;
-    letter-spacing: 0.3px;
   }
 
-  /* Responsive Property Meta */
   .property-meta {
-    top: 15px;
-    right: 15px;
-    padding: 6px 10px;
-    font-size: 0.8em;
-    letter-spacing: 0.3px;
+    top: 12px;
+    right: 12px;
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+
+  .property-features li {
+    font-size: 0.8rem;
+    padding: 4px 6px;
+  }
+
+  .property-features i {
+    font-size: 0.9rem;
   }
 
   .swiper-button-next,
   .swiper-button-prev {
-    display: flex;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
 
   .swiper-button-next::after,
   .swiper-button-prev::after {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  .testimonials-section {
+    padding: 40px 12px;
+  }
+
+  .testimonials-section h2 {
+    font-size: 2.25rem;
+  }
+
+  .testimonial-container-wrapper {
+    padding: 0 8px;
+  }
+
+  .testimonial-container {
+    gap: 10px;
+  }
+
+  .testimonial-card {
+    min-width: 240px;
+    max-width: 240px;
+    padding: 10px;
+  }
+
+  .testimonial-card.staggered {
+    margin-top: 24px;
+  }
+
+  .testimonial-card .quote-icon {
+    font-size: 32px;
+  }
+
+  .testimonial-card p {
+    font-size: 0.9em;
+    margin: 10px 0;
+  }
+
+  .testimonial-card h4 {
+    font-size: 0.95em;
+  }
+
+  .testimonial-controls {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .arrow-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
   }
 }
 
@@ -974,37 +1043,124 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
     gap: 8px;
   }
 
-    .price-badge {
-    top: 12px;
-    left: 12px;
-    padding: 5px 10px;
-    font-size: 0.9em;
-    border-radius: 12px;
+  .featured-listings {
+    padding: 30px 8px;
   }
 
-  .property-meta {
-    top: 12px;
-    right: 12px;
-    padding: 5px 8px;
-    font-size: 0.75em;
+  .featured-listings hradical
+
+  .featured-listings h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
 
-  .house-details {
+  .featuredSwiper {
+    padding: 0 4px 30px;
+  }
+
+  .swiper-slide {
+    width: 280px;
+  }
+
+  .property-card {
+    height: 360px;
+  }
+
+  .card-content {
     padding: 12px;
   }
 
   .house-name {
-    font-size: 1.1em;
-    margin-bottom: 6px;
+    font-size: 1.2rem;
+  }
+
+  .price-badge {
+    top: 10px;
+    left: 10px;
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    border-radius: 12px;
+  }
+
+  .property-meta {
+    top: 10px;
+    right: 10px;
+    font-size: 0.75rem;
+    padding: 5px 6px;
   }
 
   .property-features {
-    font-size: 0.75em;
     gap: 6px;
   }
 
-  .property-card {
-    height: 320px;
+  .property-features li {
+    font-size: 0.75rem;
+    padding: 3px 5px;
+  }
+
+  .property-features i {
+    font-size: 0.8rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 36px;
+    height: 36px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 14px;
+  }
+
+  .testimonials-section {
+    padding: 30px 8px;
+  }
+
+  .testimonials-section h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial-container-wrapper {
+    padding: 0 4px;
+  }
+
+  .testimonial-container {
+    gap: 8px;
+  }
+
+  .testimonial-card {
+    min-width: 220px;
+    max-width: 220px;
+    padding: 8px;
+  }
+
+  .testimonial-card.staggered {
+    margin-top: 16px;
+  }
+
+  .testimonial-card .quote-icon {
+    font-size: 28px;
+  }
+
+  .testimonial-card p {
+    font-size: 0.85em;
+    margin: 8px 0;
+  }
+
+  .testimonial-card h4 {
+    font-size: 0.9em;
+  }
+
+  .testimonial-controls {
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  .arrow-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
   }
 
   .amenity-card {
@@ -1017,22 +1173,6 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 
   .amenity-card span {
     font-size: 0.9em;
-  }
-
-  .swiper-slide {
-    width: 280px;
-    height: 320px;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 40px;
-    height: 40px;
-  }
-
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    font-size: 16px;
   }
 }
 

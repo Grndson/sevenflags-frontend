@@ -13,12 +13,13 @@ function initializeFAQ() {
 }
 
 function initializeContactForm() {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyVdQfUPoxOU8ezk4dhwn9ZFEiNgYDK36ES719NLVEEV0Dz_1GRyO6jViKVcqzlcVJb/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxfJhJjvWmE5913VueSTDNp-scm56ft0bH2s_TJmx38c7zPaKnRV98iCAOXgagDZY-_/exec';
   const form = document.getElementById('contactForm');
   if (!form) return;
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(form);
+    formData.append('formType', 'Contact');
     fetch(scriptURL, { method: 'POST', body: formData })
       .then(response => {
         Swal.fire('✅ Success!', 'Your message was sent.', 'success');
@@ -32,12 +33,13 @@ function initializeContactForm() {
 }
 
 function initializeInvestorForm() {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyVdQfUPoxOU8ezk4dhwn9ZFEiNgYDK36ES719NLVEEV0Dz_1GRyO6jViKVcqzlcVJb/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxfJhJjvWmE5913VueSTDNp-scm56ft0bH2s_TJmx38c7zPaKnRV98iCAOXgagDZY-_/exec';
   const form = document.getElementById('investorForm');
   if (!form) return;
   form.addEventListener('submit', e => {
     e.preventDefault();
     const formData = new FormData(form);
+    formData.append('formType', 'Investor');
     fetch(scriptURL, { method: 'POST', body: formData })
       .then(response => response.text())
       .then(() => {
@@ -52,12 +54,13 @@ function initializeInvestorForm() {
 }
 
 function initializeForm() {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyVdQfUPoxOU8ezk4dhwn9ZFEiNgYDK36ES719NLVEEV0Dz_1GRyO6jViKVcqzlcVJb/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxfJhJjvWmE5913VueSTDNp-scm56ft0bH2s_TJmx38c7zPaKnRV98iCAOXgagDZY-_/exec';
   const form = document.getElementById('visitForm');
   if (!form) return;
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(form);
+    formData.append('formType', 'Visit');
     fetch(scriptURL, { method: 'POST', body: formData })
       .then(response => response.text())
       .then(() => {
@@ -67,6 +70,27 @@ function initializeForm() {
       .catch(error => {
         console.error('Error:', error.message);
         Swal.fire({ icon: 'error', title: 'Error', text: 'There was a problem sending your request.', timer: 1500, showConfirmButton: false });
+      });
+  });
+}
+
+function initializeTravelForm() {
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxfJhJjvWmE5913VueSTDNp-scm56ft0bH2s_TJmx38c7zPaKnRV98iCAOXgagDZY-_/exec';
+  const form = document.getElementById('travelForm');
+  if (!form) return;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    formData.append('formType', 'Travel');
+    fetch(scriptURL, { method: 'POST', body: formData })
+      .then(response => response.text())
+      .then(() => {
+        Swal.fire({ icon: 'success', title: 'Success', text: 'Your travel inquiry was sent successfully!', timer: 1500, showConfirmButton: false });
+        form.reset();
+      })
+      .catch(error => {
+        console.error('Error:', error.message);
+        Swal.fire({ icon: 'error', title: 'Error', text: 'There was a problem sending your travel inquiry.', timer: 1500, showConfirmButton: false });
       });
   });
 }
@@ -254,6 +278,9 @@ function initializeFeatures(pathname) {
   if (['properties.html'].includes(currentPage)) {
     initializeForm();
   }
+  if (['travel.html'].includes(currentPage)) {
+    initializeTravelForm();
+  }
   if (['index.html', '1870.html', 'boston.html', 'crystal.html', 'emerald.html', 'enrogue.html', 'gemini.html', 'grosvenor.html', 'neptune.html', 'oasis.html', 'platinum.html', 'saruni.html', 'symphony.html', 'venus.html', 'wilma.html'].includes(currentPage)) {
     initializeCalculator();
     initializeCarousel();
@@ -273,6 +300,7 @@ export {
   initializeContactForm,
   initializeInvestorForm,
   initializeForm,
+  initializeTravelForm,
   initializeCalculator,
   initializeCarousel,
   initializeVideo,

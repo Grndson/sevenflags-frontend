@@ -58,7 +58,7 @@ function initializeHeader() {
 }
 
 function initializeNewsletterForm() {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyVdQfUPoxOU8ezk4dhwn9ZFEiNgYDK36ES719NLVEEV0Dz_1GRyO6jViKVcqzlcVJb/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzZoTTvdGaNNh7_GuiGZ6mqtiMYBfsAOQkVBnp0T-dSgFwPkxI59S-tH2U-7ceUgrw6/exec';
   const form = document.getElementById('newsletter-form');
   const emailInput = document.getElementById('newsletter-email');
   const submitButton = form?.querySelector('button[type="submit"]');
@@ -98,6 +98,7 @@ function initializeNewsletterForm() {
       submitButton.textContent = 'Submitting...';
       submitButton.disabled = true;
       const formData = new FormData(form);
+      formData.append('formType', 'Newsletter');
       fetch(scriptURL, { method: 'POST', body: formData })
         .then(response => response.text())
         .then(() => {
