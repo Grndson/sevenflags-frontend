@@ -299,8 +299,37 @@
 
   <!-- Footer Section -->
   <div id="footer"></div>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+  <!-- Lead Capture Modal -->
+  <div id="leadModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="modal-title">Get Started with Seven Flags</h2>
+      <p class="modal-subtitle">Enter your details to continue</p>
+
+      <form id="leadForm">
+        <div class="form-group">
+          <label for="first_name">First Name</label>
+          <input type="text" name="first_name" id="first_name" required>
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last Name</label>
+          <input type="text" name="last_name" id="last_name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <button type="submit" class="submit-btn">Continue</button>
+      </form>
+    </div>
+  </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="module" src="/Js/main.js"></script>
 </body>
 </html>

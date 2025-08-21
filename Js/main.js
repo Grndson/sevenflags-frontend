@@ -93,6 +93,7 @@ function initializeBackToTop() {
   });
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM loaded, initializing...');
   startPreloading();
@@ -127,4 +128,67 @@ document.querySelectorAll('.day-card').forEach(card => {
   card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(card);
 });
+
+// ✅ Initialize EmailJS
+emailjs.init("Hgm-YMdWGQjdXm3iS");
+
+const modal = document.getElementById("leadModal");
+const closeBtn = document.querySelector(".close");
+const form = document.getElementById("leadForm");
+
+// Function to attach nav link events AFTER header is loaded
+function attachNavEvents() {
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach(link => {
+    link.addEventListener("click", function(e) {
+      if (
+        (window.location.pathname.includes("index.html") || window.location.pathname === "/") &&
+        !localStorage.getItem("leadSubmitted")
+      ) {
+        e.preventDefault();
+        modal.style.display = "flex";
+        form.dataset.redirect = this.href;
+      }
+    });
+  });
+}
+
+// Close modal (X button)
+closeBtn.onclick = () => (modal.style.display = "none");
+
+// Close modal if clicked outside
+window.onclick = event => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+// Handle form submission
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs
+    .send("service_f7i1zr9", "template_gnqphzp", {
+      first_name: form.first_name.value,
+      last_name: form.last_name.value,
+      email: form.email.value
+    })
+    .then(
+      () => {
+        alert("✅ Thank you! We’ve received your info.");
+        localStorage.setItem("leadSubmitted", "true");
+        window.location.href = form.dataset.redirect;
+      },
+      err => {
+        alert("❌ Error sending message: " + JSON.stringify(err));
+      }
+    );
+});
+
+// 🔑 Attach nav events AFTER header loads dynamically
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(attachNavEvents, 500);
+});
+
+
 export { startPreloading };
